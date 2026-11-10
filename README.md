@@ -13,6 +13,6 @@ There are 2 different branches. First one is 'main', which doesn't contain any '
 
 # Setup
 
-There is particularly not that much to change, basic file contains all of my stuff. Feel free to change stuff in HTML (like Name, Bio...) and use your stuff such as Icons (some are already there) and Video itself.
+Feel free to change stuff in HTML (like Name, Bio...) and use your stuff such as Icons (some are already there) and Video itself.
 
 This build has 'Typewriter' effect for Bio and Site Title as well. Might add more stuff such as name effects, page effects, custom cursor etc... In any other updates.
