@@ -8,6 +8,44 @@ document.addEventListener("mousemove", function (event) {
     cursor.style.opacity = "1";
 });
 
+let lastFlakeX = 0;
+let lastFlakeY = 0;
+
+document.addEventListener("mousemove", function(event) {
+    
+    let distance = Math.hypot(
+        event.clientX - lastFlakeX,
+        event.clientY - lastFlakeY
+    );
+
+    if (distance < 15) return;
+
+    lastFlakeX = event.clientX;
+    lastFlakeY = event.clientY;
+
+    const flake = document.createElement("div");
+    flake.classList.add("flake");
+
+    let size = Math.random() * 4 + 3;
+
+    flake.style.width = size + "px";
+    flake.style.height = size + "px";
+
+    flake.style.left = event.clientX + "px";
+    flake.style.top = event.clientY + "px";
+
+    let dx = (Math.random() - 0.5) * 40;
+    flake.style.setProperty("--dx", dx + "px");
+
+    flake.style.animationDuration = (Math.random() * 0.7 + 0.8) + "s";
+
+    document.body.appendChild(flake);
+
+    flake.addEventListener("animationend", function() {
+        flake.remove();
+    });
+});
+
 // --- Click To Enter ---
 
 const enterscreen = document.querySelector(".enter");

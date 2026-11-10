@@ -21,7 +21,7 @@
     position: fixed;
     top: 0; left: 0;
     width: 32px;
-    filter: drop-shadow(0 0 6px white);
+    filter: drop-shadow(0 0 12px black);
     pointer-events: none;
     z-index: 999;
     opacity: 0;
@@ -40,6 +40,26 @@ body.hide-cursor .redir *{
 
 body.hide-cursor .redir button{
     cursor: pointer;
+}
+
+.flake{
+    position: fixed;
+    top: 0; left: 0;
+    width: 5px; height: 5px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 998;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+
+    animation: fall 1s ease-in forwards;
+}
+
+@keyframes fall{
+    to{
+        transform: translate(var(--dx), 80px);
+        opacity: 0;
+    }
 }
 
 /* Click To Enter Part */
