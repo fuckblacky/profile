@@ -1,3 +1,13 @@
+// --- Custom Cursor and its Trail ---
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", function (event) {
+    cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+    document.body.classList.add("hide-cursor");
+    cursor.style.opacity = "1";
+});
+
 // --- Click To Enter ---
 
 const enterscreen = document.querySelector(".enter");

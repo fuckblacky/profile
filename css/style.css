@@ -15,6 +15,33 @@
     --font-text: "JBM", sans-serif;
 }
 
+/* Custom Cursor and its Trail Part*/
+
+.cursor{
+    position: fixed;
+    top: 0; left: 0;
+    width: 32px;
+    filter: drop-shadow(0 0 6px white);
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0;
+    will-change: transform;
+}
+
+body.hide-cursor,
+body.hide-cursor *{
+    cursor: none;
+}
+
+body.hide-cursor .redir,
+body.hide-cursor .redir *{
+    cursor: auto;
+}
+
+body.hide-cursor .redir button{
+    cursor: pointer;
+}
+
 /* Click To Enter Part */
 
 .enter{
